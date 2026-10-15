@@ -1,0 +1,19 @@
+# Runtime dependencies for GPLHR_MPS and the bundled renormalizer source.
+# Existing runtime version constraints are retained; this is not a validated
+# environment lockfile for reproducing the paper's numerical results.
+numpy==1.24.*
+scipy==1.10.*
+sympy==1.11.*
+h5py==3.1.*
+opt_einsum==3.3.*
+
+# Required by the plotting/replot scripts currently included in this repository.
+matplotlib
+Pillow
+
+# Optional GPU backend: install a CuPy distribution matching your CUDA
+# environment separately. CPU execution does not require CuPy.
+# Optional renormalizer features (outside the native GPLHR solver):
+# primme for the PRIMME eigensolver; pyscf for the PySCF-based routine.
+# The bundled renormalizer and local projects/ modules are source dependencies,
+# not packages installed by this requirements file.
